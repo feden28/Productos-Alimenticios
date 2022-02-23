@@ -1,0 +1,350 @@
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@600&display=swap');
+
+    html {
+        font-size: 16px;
+
+    }
+
+    body {
+        background-color: lightsalmon;
+
+    }
+
+
+    #gridbody {
+        display: grid;
+        grid-template-areas:
+            "cabeza cabeza"
+            "barra  producto"
+            "pie    pie"
+        ;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 4fr 0.5fr;
+    }
+
+
+    header {
+        grid-area: cabeza;
+
+    }
+
+    .header__principal {
+        display: flex;
+        background-color: salmon;
+        padding: 1rem 0 0.5rem 0;
+        font-size: 1rem;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__secciones {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .header__principal--logo {
+        text-align: center;
+        image-rendering: inherit;
+    }
+
+    .header__principal--titulo {
+        color: rgb(51, 51, 51);
+        font-family: 'Baloo Bhaijaan 2', cursive;
+        font-size: 3rem;
+        margin-left: 2rem;
+        width: 300px;
+    }
+
+    .header__principal--resto {
+        color: rgb(51, 51, 51);
+        font-family: 'Baloo Bhaijaan 2', cursive;
+        font-size: 2rem;
+        margin-right: 2rem;
+        width: 300px;
+    }
+
+    nav {
+        grid-area: barra;
+    }
+
+    .nav__principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1rem 1rem 1rem 1rem;
+        padding: 1rem 1rem 1rem 1rem;
+        border: double 20px rgb(51, 51, 51);
+
+
+    }
+
+    .nav__principal--secciones {
+
+        margin: 1rem 1rem 0rem 1rem;
+        padding: 1rem 1rem 1rem 1rem;
+        border: double 6px rgb(51, 51, 51);
+
+    }
+
+    .nav__ul {
+
+        list-style: none;
+        font-size: 2rem;
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .nav__ul--secciones {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .nav__ul--li {
+
+        margin-left: 40px;
+        margin-right: 40px;
+
+    }
+
+    #producto {
+        grid-area: producto;
+        background-color: blue;
+        display: grid;
+        grid-template-areas:
+            "video  video"
+            "video video"
+            "titulo titulo"
+            "publicidad publicidad"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 0.5fr 1fr;
+
+    }
+
+    .cuerpo__principal--titulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: titulo;
+        margin: 1rem 1rem 1rem 1rem;
+        padding: 1rem 1rem 1rem 1rem;
+        font-family: sans-serif;
+        border: solid;
+        font-size: xx-large;
+        background-color: red;
+    }
+
+    .cuerpo__seccion {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .cuerpo__seccion--parrafo {
+        font-size: medium;
+        font-style: oblique;
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    .cuerpo__principal--contenido {
+        display: flex;
+        flex-direction: row;
+        grid-area: publicidad;
+        margin: 1rem 1rem 1px 2rem;
+        padding: 1rem 1rem 1rem 1rem;
+        border: solid;
+        background-color: red;
+
+    }
+
+    .cuerpo__principal--parrafo {
+        font-size: x-large;
+        margin: 1rem 1rem 1px 2rem;
+        padding: 1rem 1rem 1rem 1rem;
+        font-style: oblique;
+        font-family: sans-serif;
+        border: solid;
+        text-align: center;
+        background-color: red;
+
+    }
+
+    .cuerpo__principal--div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: video;
+        margin: 1rem 1rem 1rem 1rem;
+
+        border: solid;
+        padding: 10px;
+        justify-items: stretch;
+        background-color: red;
+    }
+
+    .cuerpo__seccion--div {
+        text-align: center;
+
+    }
+
+    .cuerpo__seccion--img {
+        border-radius: 1cm;
+    }
+
+    .cuerpo__seccion--form {
+        display: flex;
+
+        background-color: salmon;
+        border: solid darkred 2px;
+        width: 300px;
+        height: auto;
+        margin: 0 1rem 1rem 10rem;
+        text-align: left;
+        border-radius: 0.5cm;
+        display: inline-block;
+
+
+    }
+
+    .form__texto {
+        display: block;
+        margin: 5px 0 5px 10px;
+        font-size: 2rem;
+    }
+
+    .form__texto--news {
+        display: inline;
+    }
+
+    .form__cajas {
+        width: 250px;
+        margin: 0 0 3px 10px;
+    }
+
+    .form__cajas--mensaje {
+        height: 60px;
+        display: block;
+    }
+
+    .form__boton {
+        display: block;
+        margin: 10px 10px 10px 100px;
+        width: 90px;
+        height: 25px;
+    }
+
+    .form__imagen {
+        display: inline;
+
+    }
+
+    footer {
+        grid-area: pie;
+    }
+
+    .footer {
+        display: flex;
+        background-color: salmon;
+        padding: 0;
+        margin-bottom: 0;
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__titulo {
+        font-family: 'Baloo Bhaijaan 2', cursive;
+        margin: 10px;
+        padding: 10px;
+        font-size: 3rem;
+    }
+
+    .footer__texto {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 10px;
+        padding: 10px;
+        line-height: 3;
+        word-spacing: 10px;
+        font-size: 2rem;
+    }
+
+    .footer__texto--form {
+        font-size: larger;
+
+    }
+
+    .footer__texto--legal {
+        text-align: right;
+        margin: 0;
+        padding: 10% 5px 5px 0;
+        font-size: 1.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    @media (min-width: 1px) {
+        .responsive {
+            display: grid;
+            gap: 20px;
+            grid-template-areas:
+                "cabeza"
+                "navegad"
+                "producto"
+                "pie";
+            border: 2px solid black;
+        }
+
+        .header__principal {
+            flex-direction: column;
+        }
+
+        .header__principal--titulo {
+            color: rgb(51, 51, 51);
+            font-family: 'Baloo Bhaijaan 2', cursive;
+            font-size: 2rem;
+            margin-left: 1rem;
+            width: 300px;
+        }
+    }
+
+    @media (min-width: 500px) {
+
+        .header__principal {
+            flex-direction: column;
+        }
+    }
+
+    @media (min-width: 1000px) {
+        .responsive {
+            display: grid;
+            grid-template-areas:
+                "cabeza cabeza"
+                "barra  producto"
+                "pie    pie"
+            ;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 0.5fr 4fr 0.5fr;
+
+        }
+
+        .header__principal {
+            flex-direction: row;
+        }
+
+    }

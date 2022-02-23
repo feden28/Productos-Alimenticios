@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@600&display=swap');
+
+body {
+    background-color: lightsalmon;
+
+}
+
+header{
+    grid-area: cabeza;
+}
+footer{
+    grid-area: pie;
+}
+nav{
+    grid-area: navegad;
+}
+section{
+    grid-area: producto;
+}
+
+
+@media (min-width: 1px) {
+    .responsive{
+        display: grid;
+        gap: 20px;
+        grid-template-areas:
+            "cabeza"
+            "barra"
+            "producto"
+            "pie";
+        border: 2px solid black;
+
+    }
+
+
+    }
