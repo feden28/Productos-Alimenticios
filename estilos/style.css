@@ -6,7 +6,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@600&display=swap');
 
     html {
-        font-size: 16px;
+        font-size: 20px;
 
     }
 
@@ -15,18 +15,16 @@
 
     }
 
-
-    #gridbody {
+    .responsive {
         display: grid;
+        gap: 20px;
         grid-template-areas:
-            "cabeza cabeza"
-            "barra  producto"
-            "pie    pie"
-        ;
-        grid-template-columns: 1fr 4fr;
-        grid-template-rows: 1fr 4fr 0.5fr;
+            "cabeza"
+            "barra"
+            "producto"
+            "pie";
+        border: 2px solid black;
     }
-
 
     header {
         grid-area: cabeza;
@@ -35,18 +33,14 @@
 
     .header__principal {
         display: flex;
-        background-color: salmon;
-        padding: 1rem 0 0.5rem 0;
-        font-size: 1rem;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
-    }
-
-    .header__secciones {
-        display: flex;
-        align-items: flex-end;
+        background-color: salmon;
+        padding: 1rem 0 0.5rem 0;
+        font-size: 1rem;
+        
     }
 
     .header__principal--logo {
@@ -70,6 +64,13 @@
         width: 300px;
     }
 
+    .header__secciones {
+        display: flex;
+        align-items: flex-end;
+    }
+
+   
+
     nav {
         grid-area: barra;
     }
@@ -82,8 +83,6 @@
         margin: 1rem 1rem 1rem 1rem;
         padding: 1rem 1rem 1rem 1rem;
         border: double 20px rgb(51, 51, 51);
-
-
     }
 
     .nav__principal--secciones {
@@ -118,20 +117,6 @@
 
     }
 
-    #producto {
-        grid-area: producto;
-        background-color: blue;
-        display: grid;
-        grid-template-areas:
-            "video  video"
-            "video video"
-            "titulo titulo"
-            "publicidad publicidad"
-        ;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 0.5fr 1fr;
-
-    }
 
     .cuerpo__principal--titulo {
         display: flex;
@@ -164,7 +149,7 @@
         display: flex;
         flex-direction: row;
         grid-area: publicidad;
-        margin: 1rem 1rem 1px 2rem;
+        margin: 1rem 1rem 1px 1rem;
         padding: 1rem 1rem 1rem 1rem;
         border: solid;
         background-color: red;
@@ -173,7 +158,7 @@
 
     .cuerpo__principal--parrafo {
         font-size: x-large;
-        margin: 1rem 1rem 1px 2rem;
+        margin: 1rem 1rem 1px 1rem;
         padding: 1rem 1rem 1rem 1rem;
         font-style: oblique;
         font-family: sans-serif;
@@ -189,7 +174,6 @@
         align-items: center;
         grid-area: video;
         margin: 1rem 1rem 1rem 1rem;
-
         border: solid;
         padding: 10px;
         justify-items: stretch;
@@ -207,7 +191,6 @@
 
     .cuerpo__seccion--form {
         display: flex;
-
         background-color: salmon;
         border: solid darkred 2px;
         width: 300px;
@@ -298,38 +281,6 @@
     }
 
 
-    @media (min-width: 1px) {
-        .responsive {
-            display: grid;
-            gap: 20px;
-            grid-template-areas:
-                "cabeza"
-                "navegad"
-                "producto"
-                "pie";
-            border: 2px solid black;
-        }
-
-        .header__principal {
-            flex-direction: column;
-        }
-
-        .header__principal--titulo {
-            color: rgb(51, 51, 51);
-            font-family: 'Baloo Bhaijaan 2', cursive;
-            font-size: 2rem;
-            margin-left: 1rem;
-            width: 300px;
-        }
-    }
-
-    @media (min-width: 500px) {
-
-        .header__principal {
-            flex-direction: column;
-        }
-    }
-
     @media (min-width: 1000px) {
         .responsive {
             display: grid;
@@ -344,7 +295,26 @@
         }
 
         .header__principal {
+            display: flex;
             flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
         }
 
+        #producto {
+            grid-area: producto;
+            background-color: blue;
+            display: grid;
+            grid-template-areas:
+                "video  video"
+                "video video"
+                "titulo titulo"
+                "publicidad publicidad"
+            ;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 0.5fr 1fr;
+    
+        }
+    
     }
