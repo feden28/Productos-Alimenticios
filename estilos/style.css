@@ -10,9 +10,9 @@
 
     }
 
-    body {
-        background: linear-gradient(rgb(255, 76, 76), rgb(248, 97, 97), lightsalmon);
-    }
+    /*    body {
+        
+    }*/
 
     header {
         grid-area: cabeza;
@@ -43,7 +43,7 @@
         border: 2px solid black;
     }
 
-    .logo {
+    .logo:hover {
         transform: rotate(360deg);
         transition: all 5s
     }
@@ -439,7 +439,7 @@
         }
 
         .video:hover {
-            transform: scale(2);
+            transform: scale(1.5);
             transition: all 3s;
         }
 
