@@ -30,9 +30,7 @@
         grid-area: pie;
     }
 
-    .borde {
-        border: solid 1px black;
-    }
+    
 
     /*
     .responsive {
@@ -69,6 +67,9 @@
 
     /*clases aplicadas a index*/
 
+    .borde {
+        border: solid 1px black;
+    }
 
     .logo:hover {
         transform: rotate(360deg);
@@ -431,8 +432,8 @@
         }
 
         .video:hover {
-            transform: scale(1.5);
-            transition: all 3s;
+            transform: scale(1.2);
+            transition: all 2s;
         }
 
 
