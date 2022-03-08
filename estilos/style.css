@@ -81,6 +81,13 @@
         transition: all 2s;
         background-color: grey;
     }
+    .margin {
+        display: flex;
+        margin: 1%;
+        padding: 1%;
+        align-items: stretch;
+
+    }
 
     .animacionOpacidad {
         color: rgb(51, 51, 51);
