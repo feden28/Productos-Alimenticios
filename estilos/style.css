@@ -1,468 +1,335 @@
-    * {
-        padding: 0;
-        margin: 0;
-    }
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@600&display=swap");
+* {
+  padding: 0;
+  margin: 0; }
 
-    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@600&display=swap');
+html {
+  font-size: 12px; }
 
-    html {
-        font-size: 12px;
+body {
+  background: linear-gradient(lightsalmon, #f86161, #ff4c4c); }
 
-    }
-
-    body {
-
-        background: linear-gradient(lightsalmon, rgb(248, 97, 97), rgb(255, 76, 76));
-
-    }
-
-    header {
-        grid-area: cabeza;
-
-    }
-
-    nav {
-        grid-area: barra;
-    }
-
-    footer {
-        background: linear-gradient(lightsalmon, rgb(248, 97, 97), rgb(255, 76, 76));
-        grid-area: pie;
-    }
-
-    
-
-    /*
-    .responsive {
-        display: grid;
-        gap: 5px;
-        grid-template-areas:
-            "cabeza"
-            "barra"
-            "producto"
-            "pie";
-        border: 2px solid black;
-    }
-
-    .header__principal {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 1rem;
-    }
-
-    .header__principal--logo {
-        text-align: center;
-        image-rendering: inherit;
-    }
-
-   
-    .header__principal--resto {
-        color: rgb(51, 51, 51);
-        font-family: 'Baloo Bhaijaan 2', cursive;
-        font-size: 2rem;
-    } */
-
-    /*clases aplicadas a index*/
-
-    .borde {
-        border: solid 1px black;
-    }
-
-    .logo:hover {
-        transform: rotate(360deg);
-        transition: all 5s
-    }
-
-    .cursor:hover {
-        transform: scale(130%);
-        transition: all 2s;
-        background-color: grey;
-    }
-    .margin {
-        display: flex;
-        margin: 1%;
-        padding: 1%;
-        align-items: stretch;
-
-    }
-
-    .animacionOpacidad {
-        color: rgb(51, 51, 51);
-        font-family: 'Baloo Bhaijaan 2', cursive;
-        font-size: 3rem;
-        animation: opacidad 5s;
-
-    }
-
-    @keyframes opacidad {
-        0% {
-            opacity: 0;
-        }
-
-        10% {
-            opacity: 0.1;
-        }
-
-        20% {
-            opacity: 0.2;
-        }
-
-        30% {
-            opacity: 0.3;
-        }
-
-        40% {
-            opacity: 0.4;
-        }
-
-        50% {
-            opacity: 0.5;
-        }
-
-        60% {
-            opacity: 0.6;
-        }
-
-        70% {
-            opacity: 0.7;
-        }
-
-        80% {
-            opacity: 0.8;
-        }
-
-        90% {
-            opacity: 0.9;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    .navbar-collapse {
-        flex-grow: initial;
-    }
-
-    .zoomLista:hover {
-        transform: translateX(30%);
-        transition: all 2s;
-    }
-
-    .cuerpo__principal--tit {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: stretch;
-        grid-area: titulo;
-        border: solid;
-    }
-
-    .cuerpo__principal--contenido {
-        display: flex;
-        flex-direction: column;
-        grid-area: publicidad;
-        justify-content: center;
-        align-items: stretch;
-        border: solid;
-
-    }
-
-    .cuerpo__principal--parrafo {
-        display: flex;
-        align-items: center;
-        font-size: 1.5rem;
-        font-style: oblique;
-        font-family: sans-serif;
-        border: solid;
-        text-align: center;
-    }
-
-    .cuerpo__principal--div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        grid-area: video;
-
-    }
-
-    .cuerpo__principal--vid {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        grid-area: video;
-        border-radius: 1cm;
-        justify-items: stretch;
-    }
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin-bottom: 0;
-        text-align: center;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .footer__titulo {
-        grid-area: titulo;
-        font-family: 'Baloo Bhaijaan 2', cursive;
-        font-size: 3rem;
-    }
-
-    .footer__texto {
-        grid-area: texto;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        line-height: 3;
-        word-spacing: 10px;
-        font-size: 2rem;
-    }
-
-    .footer__texto--form {
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 0;
+  text-align: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center; }
+  .footer .footer__titulo {
+    grid-area: titulo;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 3rem; }
+    .footer .footer__titulo .footer__texto {
+      grid-area: texto;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 3;
+      word-spacing: 10px;
+      font-size: 2rem; }
+      .footer .footer__titulo .footer__texto .footer__texto--form {
         grid-area: suscripcion;
-        font-size: larger;
-    }
+        font-size: larger; }
+        .footer .footer__titulo .footer__texto .footer__texto--form .footer__texto--legal {
+          display: flex;
+          grid-area: legal;
+          justify-content: center;
+          align-items: flex-end;
+          text-align: right;
+          font-size: 0.5rem;
+          font-family: Arial, Helvetica, sans-serif; }
 
-    .footer__texto--legal {
-        display: flex;
-        grid-area: legal;
-        justify-content: center;
-        align-items: flex-end;
-        text-align: right;
-        font-size: 0.5rem;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+header {
+  grid-area: cabeza; }
 
+nav {
+  grid-area: barra; }
 
-    /*clases aplicadas a secciones*/
+footer {
+  background: linear-gradient(lightsalmon, #f86161, #ff4c4c);
+  grid-area: pie; }
 
-    .header__secciones {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        font-size: 1rem;
+/*
+.responsive {
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+        "cabeza"
+        "barra"
+        "producto"
+        "pie";
+    border: 2px solid black;
+}
 
-    }
+.header__principal {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
 
-    .header__secciones--logo {
-        grid-area: logo;
-        text-align: center;
-        image-rendering: inherit;
-    }
-
-    .nav__principal--secciones {
-        grid-area: barra;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-        align-items: stretch;
-        border: double 6px rgb(51, 51, 51);
-
-    }
-
-    .nav__ul--secciones {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: stretch;
-        list-style: none;
-        font-size: 1.5rem;
-        text-align: center;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        border: solid 2px black;
-    }
-
-    .nav__seccionesUl--li {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: stretch;
-        font-size: 2rem;
-    }
-
-    .zoomLista__secciones:hover {
-        transform: scale(1.3);
-        transition: all 1s;
-    }
-
-    .cuerpo__seccion {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: stretch;
-    }
-
-    .cuerpo__seccion--parrafo {
-        font-size: medium;
-        font-style: oblique;
-        font-family: sans-serif;
-        text-align: center;
-    }
-
-    .cuerpo__seccion--div {
-        text-align: center;
-
-    }
-
-    .cuerpo__seccion--img {
-        border-radius: 1cm;
-    }
-
-    .cuerpo__seccion--form {
-        display: flex;
-
-        border: solid darkred 2px;
-        width: 300px;
-        height: auto;
-
-        text-align: left;
-        border-radius: 0.5cm;
-        display: inline-block;
-    }
-
-    .form__texto {
-        display: block;
-
-        font-size: 2rem;
-    }
-
-    .form__texto--news {
-        display: inline;
-    }
-
-    .form__cajas {
-        width: 250px;
-
-    }
-
-    .form__cajas--mensaje {
-        height: 60px;
-        display: block;
-    }
-
-    .form__boton {
-        display: block;
-
-        width: 90px;
-        height: 25px;
-    }
-
-    .form__imagen {
-        display: inline;
-
-    }
-
-    .footer__secciones {
-        display: flex;
-        flex-direction: column;
-
-        padding: 0;
-        margin-bottom: 0;
-        text-align: center;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .footer__secciones--texto {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        line-height: 3;
-        word-spacing: 10px;
-        font-size: 2rem;
-    }
+.header__principal--logo {
+    text-align: center;
+    image-rendering: inherit;
+}
 
 
-    .footer__secciones--form {
-        font-size: larger;
+.header__principal--resto {
+    color: rgb(51, 51, 51);
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 2rem;
+} */
+/*clases aplicadas a index*/
+.borde {
+  border: solid 1px black; }
 
-    }
+.logo:hover {
+  transform: rotate(360deg);
+  transition: all 5s; }
 
-    .footer__secciones--legal {
-        display: flex;
-        justify-content: end;
-        align-items: flex-end;
-        text-align: right;
-        font-size: 0.5rem;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+.cursor:hover {
+  transform: scale(130%);
+  transition: all 2s;
+  background-color: grey; }
 
+.margin {
+  display: flex;
+  margin: 1%;
+  padding: 1%;
+  align-items: stretch; }
 
+.animacionOpacidad {
+  color: #333333;
+  font-family: 'Baloo Bhaijaan 2', cursive;
+  font-size: 3rem;
+  animation: opacidad 5s; }
 
+@keyframes opacidad {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 0.1; }
+  20% {
+    opacity: 0.2; }
+  30% {
+    opacity: 0.3; }
+  40% {
+    opacity: 0.4; }
+  50% {
+    opacity: 0.5; }
+  60% {
+    opacity: 0.6; }
+  70% {
+    opacity: 0.7; }
+  80% {
+    opacity: 0.8; }
+  90% {
+    opacity: 0.9; }
+  100% {
+    opacity: 1; } }
 
-    /*MEDIA QUERYS*/
+.navbar-collapse {
+  flex-grow: initial; }
 
-    @media (min-width: 1000px) {
-        .responsive {
-            display: grid;
-            grid-template-areas:
-                "cabeza cabeza"
-                "barra  producto"
-                "pie    pie"
-            ;
-            grid-template-columns: 1fr 4fr;
-            grid-template-rows: 0.5fr 4fr 0.5fr;
+.zoomLista:hover {
+  transform: translateX(30%);
+  transition: all 2s; }
 
-        }
+.cuerpo__principal--tit {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  grid-area: titulo;
+  border: solid; }
 
-        .header__principal {
-            flex-direction: row;
-        }
+.cuerpo__principal--contenido {
+  display: flex;
+  flex-direction: column;
+  grid-area: publicidad;
+  justify-content: center;
+  align-items: stretch;
+  border: solid; }
 
-        .header__secciones {
-            display: flex;
-            display: grid;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            font-size: 1rem;
-            grid-template-areas: "logo  barra";
-        }
+.cuerpo__principal--parrafo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-style: oblique;
+  font-family: sans-serif;
+  border: solid;
+  text-align: center; }
 
-        #producto {
-            grid-area: producto;
+.cuerpo__principal--div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: video; }
 
-            display: grid;
-            grid-template-areas:
-                "video  video"
-                "titulo titulo"
-                "publicidad publicidad"
-            ;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 0.5fr 1fr;
+.cuerpo__principal--vid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: video;
+  border-radius: 1cm;
+  justify-items: stretch; }
 
-        }
+/*clases aplicadas a secciones*/
+.header__secciones {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-size: 1rem; }
 
-        .video:hover {
-            transform: scale(1.2);
-            transition: all 2s;
-        }
+.header__secciones--logo {
+  grid-area: logo;
+  text-align: center;
+  image-rendering: inherit; }
 
+.nav__principal--secciones {
+  grid-area: barra;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: stretch;
+  border: double 6px #333333; }
 
-        .cuerpo__principal--contenido {
-            flex-direction: row;
-        }
+.nav__ul--secciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  list-style: none;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border: solid 2px black; }
 
-        .cuerpo__principal--parrafo {
-            flex-direction: row;
-        }
+.nav__seccionesUl--li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  font-size: 2rem; }
 
-        .footer {
-            flex-direction: row;
-            display: grid;
-            grid-template-rows: 1fr 1fr 0.25fr;
-            grid-template-areas:
-                "titulo      titulo"
-                "suscripcion texto"
-                "legales    legales";
-        }
+.zoomLista__secciones:hover {
+  transform: scale(1.3);
+  transition: all 1s; }
 
-        .nav__ul--secciones {
-            flex-direction: row;
-        }
-    }
+.cuerpo__seccion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch; }
+
+.cuerpo__seccion--parrafo {
+  font-size: medium;
+  font-style: oblique;
+  font-family: sans-serif;
+  text-align: center; }
+
+.cuerpo__seccion--div {
+  text-align: center; }
+
+.cuerpo__seccion--img {
+  border-radius: 1cm; }
+
+.cuerpo__seccion--form {
+  display: flex;
+  border: solid darkred 2px;
+  width: 300px;
+  height: auto;
+  text-align: left;
+  border-radius: 0.5cm;
+  display: inline-block; }
+
+.form__texto {
+  display: block;
+  font-size: 2rem; }
+
+.form__texto--news {
+  display: inline; }
+
+.form__cajas {
+  width: 250px; }
+
+.form__cajas--mensaje {
+  height: 60px;
+  display: block; }
+
+.form__boton {
+  display: block;
+  width: 90px;
+  height: 25px; }
+
+.form__imagen {
+  display: inline; }
+
+.footer__secciones {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 0;
+  text-align: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.footer__secciones--texto {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 3;
+  word-spacing: 10px;
+  font-size: 2rem; }
+
+.footer__secciones--form {
+  font-size: larger; }
+
+.footer__secciones--legal {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  text-align: right;
+  font-size: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif; }
+
+/*MEDIA QUERYS*/
+@media (min-width: 1000px) {
+  .responsive {
+    display: grid;
+    grid-template-areas: "cabeza cabeza" "barra  producto" "pie    pie";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 0.5fr 4fr 0.5fr; }
+  .header__principal {
+    flex-direction: row; }
+  .header__secciones {
+    display: flex;
+    display: grid;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 1rem;
+    grid-template-areas: "logo  barra"; }
+  #producto {
+    grid-area: producto;
+    display: grid;
+    grid-template-areas: "video  video" "titulo titulo" "publicidad publicidad";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr; }
+  .video:hover {
+    transform: scale(1.2);
+    transition: all 2s; }
+  .cuerpo__principal--contenido {
+    flex-direction: row; }
+  .cuerpo__principal--parrafo {
+    flex-direction: row; }
+  .footer {
+    flex-direction: row;
+    display: grid;
+    grid-template-rows: 1fr 1fr 0.25fr;
+    grid-template-areas: "titulo      titulo" "suscripcion texto" "legales    legales"; }
+  .nav__ul--secciones {
+    flex-direction: row; } }
