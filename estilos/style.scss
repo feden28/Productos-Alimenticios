@@ -59,16 +59,22 @@ footer {
     border: solid 1px black;
 }
 
-.logo:hover {
-    transform: rotate(360deg);
-    transition: all 5s
+.logo {
+    &:hover {
+        transform: rotate(360deg);
+        transition: all 5s
+    }
 }
 
-.cursor:hover {
-    transform: scale(130%);
-    transition: all 2s;
-    background-color: grey;
+
+.cursor {
+    &:hover {
+        transform: scale(130%);
+        transition: all 2s;
+        background-color: grey;
+    }
 }
+
 .margin {
     display: flex;
     margin: 1%;
@@ -135,9 +141,11 @@ footer {
     flex-grow: initial;
 }
 
-.zoomLista:hover {
-    transform: translateX(30%);
-    transition: all 2s;
+.zoomLista {
+    &:hover {
+        transform: translateX(30%);
+        transition: all 2s;
+    }
 }
 
 .cuerpo__principal--tit {
@@ -234,10 +242,13 @@ footer {
     font-size: 2rem;
 }
 
-.zoomLista__secciones:hover {
-    transform: scale(1.3);
-    transition: all 1s;
+.zoomLista__secciones {
+    &:hover {
+        transform: scale(1.3);
+        transition: all 1s;
+    }
 }
+
 
 .cuerpo__seccion {
     display: flex;
@@ -371,6 +382,7 @@ footer {
         grid-template-areas: "logo  barra";
     }
 
+    /*
     #producto {
         grid-area: producto;
 
@@ -383,12 +395,15 @@ footer {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
 
+    }*/
+
+    .video {
+        &:hover {
+            transform: scale(1.2);
+            transition: all 2s;
+        }
     }
 
-    .video:hover {
-        transform: scale(1.2);
-        transition: all 2s;
-    }
 
 
     .cuerpo__principal--contenido {
