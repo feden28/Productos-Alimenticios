@@ -249,6 +249,50 @@ footer {
     }
 }
 
+@mixin size ($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+.eventos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid 2px black;
+    background-color: red;
+    padding: auto;
+    margin: auto;
+
+    .botones {
+        padding: 3px;
+        font-size: 1rem;
+        @extend .zoomLista__secciones;
+        @include size (10vw, 3vw);
+    }
+}
+
+$redes:(desayunos: #ff3ddf,
+    agapes: #ff3535,
+    cenas: #54ff3e,
+    almuerzos: #fcff35,
+);
+
+@each $red,
+$color in $redes {
+    .btn-#{$red} {
+        background-color: $color;
+    }
+}
+
+.cuerpo__seccion--div {
+    text-align: center;
+    margin: 5px;
+}
+
+.cuerpo__seccion--img {
+    border-radius: 1cm;
+    @include size (50vw, 100vw)
+}
 
 .cuerpo__seccion {
     display: flex;
@@ -262,15 +306,6 @@ footer {
     font-style: oblique;
     font-family: sans-serif;
     text-align: center;
-}
-
-.cuerpo__seccion--div {
-    text-align: center;
-
-}
-
-.cuerpo__seccion--img {
-    border-radius: 1cm;
 }
 
 .cuerpo__seccion--form {
