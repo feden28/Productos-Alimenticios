@@ -83,39 +83,6 @@ footer {
   grid-area: pie;
 }
 
-/*
-.responsive {
-    display: grid;
-    gap: 5px;
-    grid-template-areas:
-        "cabeza"
-        "barra"
-        "producto"
-        "pie";
-    border: 2px solid black;
-}
-
-.header__principal {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1rem;
-}
-
-.header__principal--logo {
-    text-align: center;
-    image-rendering: inherit;
-}
-
-
-.header__principal--resto {
-    color: rgb(51, 51, 51);
-    font-family: 'Baloo Bhaijaan 2', cursive;
-    font-size: 2rem;
-} */
-/*clases aplicadas a index*/
 .borde {
   border: solid 1px black;
 }
@@ -150,8 +117,8 @@ footer {
   color: #333333;
   font-family: 'Baloo Bhaijaan 2', cursive;
   font-size: 3rem;
-  -webkit-animation: opacidad 5s;
-          animation: opacidad 5s;
+  -webkit-animation: opacidad 3s;
+          animation: opacidad 3s;
 }
 
 @-webkit-keyframes opacidad {
@@ -319,7 +286,6 @@ footer {
   justify-items: stretch;
 }
 
-/*clases aplicadas a secciones*/
 .header__secciones {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -569,9 +535,7 @@ footer {
   .responsive {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "cabeza cabeza"
- "barra  producto"
- "pie    pie";
+        grid-template-areas: "cabeza cabeza" "barra  producto" "pie    pie";
     -ms-grid-columns: 1fr 4fr;
         grid-template-columns: 1fr 4fr;
     -ms-grid-rows: 0.5fr 4fr 0.5fr;
@@ -598,20 +562,6 @@ footer {
     font-size: 1rem;
         grid-template-areas: "logo  barra";
   }
-  /*
-    #producto {
-        grid-area: producto;
-
-        display: grid;
-        grid-template-areas:
-            "video  video"
-            "titulo titulo"
-            "publicidad publicidad"
-        ;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 0.5fr 1fr;
-
-    }*/
   .video:hover {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
@@ -639,9 +589,7 @@ footer {
     display: grid;
     -ms-grid-rows: 1fr 1fr 0.25fr;
         grid-template-rows: 1fr 1fr 0.25fr;
-        grid-template-areas: "titulo      titulo"
- "suscripcion texto"
- "legales    legales";
+        grid-template-areas: "titulo      titulo" "suscripcion texto" "legales    legales";
   }
   .nav__ul--secciones {
     -webkit-box-orient: horizontal;
