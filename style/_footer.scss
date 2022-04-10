@@ -1,0 +1,65 @@
+.footer {
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 0.2fr;
+    grid-template-areas:
+        "titulo redes"
+        "legal legal"
+    ;
+}
+
+.footer__titulo {
+    grid-area: titulo;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 700;
+    font-size: x-large;
+    margin: auto;
+}
+
+
+.footer__texto {
+    grid-area: redes;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Mukta', sans-serif;
+}
+
+.footer__legal {
+    grid-area: legal;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    align-items: flex-end;
+    font-size: 16px;
+    font-family: 'Mukta', sans-serif;
+    margin-bottom: 0;
+    text-align: right;
+    margin-right: 5px;
+}
+
+@media (max-width: 850px) {
+    .footer__legal {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .footer {
+       grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr 0.25fr;
+        grid-template-areas:
+        "titulo"
+        "redes"
+        "legal"
+        ;
+        
+    }
+
+}

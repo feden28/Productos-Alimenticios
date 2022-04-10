@@ -17,41 +17,46 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
             <div class="container-fluid">
-              <a class="navbar-brand w-25 animacionOpacidad" href="index.html"><img src="../imagenes/logo_proal1.png" alt="logo" class="w-75"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse h3" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="nosotros.html">Nosotros</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Productos y Servicios
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item h2" href="eventos.html">Cattering y Eventos</a></li>
-                        <li><a class="dropdown-item h2" href="productos.html#panificado">Panadería y Pastelería</a></li>
-                        <li><a class="dropdown-item h2" href="productos.html#cocinaysandwich">Cocina y Sandwicheria</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="contacto.html">Contactanos</a>
-                  </li>
-                </ul>
-              </div>
+                <a class="navbar-brand w-25 animacionOpacidad" href="../index.html"><img
+                        src="../imagenes/logo_proal1.png" alt="logo" class="w-75"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse h3" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos y Servicios
+                            </a>
+                            <ul class="dropdown-menu bg-danger" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item colorTxtMenu" href="eventos.html">Cattering y Eventos</a></li>
+                                <li><a class="dropdown-item colorTxtMenu" href="productos.html#panificado">Panadería y Pastelería</a></li>
+                                <li><a class="dropdown-item colorTxtMenu" href="productos.html#cocinaysandwich">Cocina y Sandwicheria</a></li>
+                              </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacto.html">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </nav>
+        </nav>
     </header>
 
-    <h2 class="cuerpo__principal--tit">
+    <h2 class="titulo">
         Dejanos un mensaje! Te responderemos a la brevedad!!
     </h2>
-    <form class="cuerpo__seccion--form">
+
+    <form class="seccion__form">
         <label for="correo" class="form__texto">Correo Electrónico</label>
         <input type="email" name="correo" class="form__cajas">
 
@@ -66,79 +71,95 @@
         <label for="mensaje" class="form__texto">Mensaje</label>
         <input type="text" name="mensaje" class="form__cajas form__cajas--mensaje">
 
-        <p class="form__texto form__texto--news">Desea recibir nuestro newsletter</p>
-        <select name="notificacion">
+        <p class="form__texto ">Desea recibir nuestro newsletter</p>
+        <select name="notificacion" class="form__desplegable">
             <option value="yes">Si</option>
             <option value="no">No</option>
         </select>
 
         <input type="submit" value="Enviar" class="form__boton" />
     </form>
-    <img src="../imagenes/icons8-correo-electrónico-abierto-100.png" alt="Imagen Mail" class="form__imagen">
 
-    <h2 class="cuerpo__principal--titulo">
-        No olvides dejarnos tu Email <a href="#pie">aqui</a> para enterarte de las últimas promociones y novedades!!
-    </h2>
-
-    <section class="cuerpo__seccion">
-        <h2 class="cuerpo__principal--titulo">
+    <section class="contacto__sucursales">
+        <h2 class="titulo sucursales__pos">
             Buscanos en nuestras dos Sucursales:
         </h2>
-        <ul>
-            <li>
-                <P class="cuerpo__principal--parrafo">
-                    Sucursal Godoy Cruz <br>
-                    San Martín Sur 950 - Godoy Cruz - Mendoza <br>
-                    Tel: 0261 4222307 <br>
-                    <a href="https://goo.gl/maps/ox7pYbJtQ9oxDmvQ9">Ver Ubicación en Google Maps</a>
-                </P>
+        <ul class="sucursales__lista">
+            <div class="lista">
+                <li>
+                    <h5>
+                        Sucursal Godoy Cruz
+                    </h5>
+                    <P class="lista__texto">
+                        San Martín Sur 950 - Godoy Cruz - Mendoza <br>
+                        Tel: 0261 4222307 <br>
+                    </P>
+                    <div>
+                        <iframe class="lista__mapa"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.591068089651!2d-68.85244048481393!3d-32.935400880924426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0bd1b6523ed5%3A0x96762c3ad5a1cd4!2sCONFITER%C3%8DA%20PROAL!5e0!3m2!1sen!2sar!4v1649598170134!5m2!1sen!2sar"
+                            width="150" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
 
-            </li>
+                </li>
 
-            <li>
-                <p class="cuerpo__principal--parrafo">
-                    Sucursal Dorrego <br>
-                    Vicente Zapata 369 - Guaymallen - Mendoza <br>
-                    Tel: 261 4322828 <br>
-                    <a href="https://goo.gl/maps/ijoP8mrF3eE7beor9">Ver Ubicación en Google Maps</a>
-                </p>
+            </div>
 
-            </li>
+            <div class="lista">
+                <li>
+                    <h5>
+                        Sucursal Dorrego
+                    </h5>
+                    <p class="lista__texto">
+                        Vicente Zapata 369 - Guaymallen - Mendoza <br>
+                        Tel: 261 4322828 <br>
+                    </p>
+                    <div>
+                        <iframe class="lista__mapa"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.0353816004963!2d-68.8313852848149!3d-32.897232780935795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e093f54c52603%3A0xf4d6bcb83fd383e4!2sConfiteria%20Proal!5e0!3m2!1sen!2sar!4v1649598303582!5m2!1sen!2sar"
+                            width="150" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </li>
+            </div>
         </ul>
 
     </section>
 
-    <footer id="pie" class="footer__secciones">
-        <h2 class="footer__titulo">
-            Productos Alimenticios SRL
-        </h2>
-        <section class="footer__secciones--texto">
-            <a href="contacto.html">Contactanos</a>
+    <footer id="pie" class="footer">
+        <h4 class="footer__titulo">
+            <a href="../index.html">Productos Alimenticios SRL</a>
+        </h4>
+        <div class="footer__texto">
+            <a href="./contacto.html">Contactanos</a>
 
             <a href="https://www.instagram.com/confiteriaproal/"><img src="../imagenes/insta.png"
                     alt="instagram">@confiteriaProal</a>
 
             <a href="https://www.facebook.com/confiteria.proal"><img src="../imagenes/face1.png"
                     alt="facebook">/confiteria.Proal</a>
-            <form class="footer__secciones--form">
+            <form class="footer__texto--form">
                 <label for="correo">Suscribite al newsletter</label>
                 <input type="email" name="correo">
                 <input type="submit" value="Enviar">
             </form>
-        </section>
-        <div>
-            <P class="footer__secciones--legal">
+        </div>
+        <div class="footer__legal">
+            <p>
                 Copyright PROAL SRL - 2022. Todos los derechos reservados. Defensa de las y los consumidores. Para
                 reclamos
                 <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario">ingrese aquí</a>.
-            </P>
+            </p>
         </div>
 
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-</script>
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

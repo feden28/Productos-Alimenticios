@@ -17,8 +17,8 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
       <div class="container-fluid">
-        <a class="navbar-brand w-25 animacionOpacidad" href="index.html"><img src="../imagenes/logo_proal1.png" alt="logo"
-            class="w-75"></a>
+        <a class="navbar-brand w-25 animacionOpacidad" href="../index.html"><img src="../imagenes/logo_proal1.png"
+            alt="logo" class="w-75"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -36,10 +36,10 @@
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Productos y Servicios
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item h2" href="eventos.html">Cattering y Eventos</a></li>
-                <li><a class="dropdown-item h2" href="productos.html#panificado">Panadería y Pastelería</a></li>
-                <li><a class="dropdown-item h2" href="productos.html#cocinaysandwich">Cocina y Sandwicheria</a></li>
+              <ul class="dropdown-menu bg-danger" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item colorTxtMenu" href="eventos.html">Cattering y Eventos</a></li>
+                <li><a class="dropdown-item colorTxtMenu" href="productos.html#panificado">Panadería y Pastelería</a></li>
+                <li><a class="dropdown-item colorTxtMenu" href="productos.html#cocinaysandwich">Cocina y Sandwicheria</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -51,35 +51,83 @@
     </nav>
   </header>
 
-  <section>
-    <h2 class="cuerpo__principal--titulo">
-      No olvides dejarnos tu Email <a href="#pie">aqui</a> para enterarte de las últimas promociones y novedades!!
-    </h2>
-
+  <section style="background-color: rgb(187,33,36); border: solid 3px black;">
+  
     <section class="eventos">
-      <div><input type="button" value="Desayunos" class="eventos botones btn-desayunos"></div>
-      <div><input type="button" value="Agapes" class="eventos botones btn-agapes"></div>
-      <div><input type="button" value="Cenas" class="eventos botones btn-cenas"></div>
-      <div><input type="button" value="Almuerzos" class="eventos botones btn-almuerzos"></div>
-    </section>
+      <div class="eventos__tipos">
+        <div class="tipos__orden">
+          <a class="tipos__texto" href="#catering">
+            <h4>Desayunos</h4>
+          </a>
+          <a href="#catering"><img class="tipos__imagen" src="../imagenes/cat_desayuno.jpg" alt="Desayuno"></a>
+        </div>
+        <div class="tipos__orden">
+          <a class="tipos__texto" href="#catering">
+            <h4>Agapes</h4>
+          </a>
+          <a href="#catering"><img src="../imagenes/cat_agape.jpg" alt="Agapes" class="tipos__imagen"></a>
+        </div>
+        <div class="tipos__orden">
+          <a class="tipos__texto" href="#catering">
+            <h4>Almuerzos y Cenas</h4>
+          </a>
+          <a href="#catering"><img src="../imagenes/cat_cenas.png" alt="Almuerzo y Cenas" class="tipos__imagen"></a>
+        </div>
+        <div class="tipos__orden">
+          <a class="tipos__texto" href="#catering">
+            <h4>Mesas Dulces</h4>
+          </a>
+          <a href="#catering"><img src="../imagenes/cat_dulce.jpg" alt="Dulce" class="tipos__imagen"></a>
+        </div>
 
-    <p class="cuerpo__seccion--parrafo">
-      No dejes pasar esta oportunidad!! Está siempre listo/a para ese evento especial con el mejor servicio!
-    </p>
+      </div>
+      <div class="imagen__ppal">
+       <img src="../imagenes/catering.jpg" alt="Catering">
+        </div>
 
-    <div class="cuerpo__seccion--div">
-      <img src="../imagenes/catering.jpg" alt="Catering" class="cuerpo__seccion--img">
+     </section>
+     <form id="catering" class="eventos__form">
+      <div class="nom">
+        <label for="nom_ape" class="formEve__texto">Nombre y Apellido:</label>
+        <input type="text" name="nom_ape" class="form__cajas">
+      </div>
 
-    </div>
+      <div class="mail">
+        <label for="correo" class="formEve__texto">Correo Electrónico:</label>
+        <input type="email" name="correo" class="form__cajas">
+      </div>
 
+      <div class="telef">
+        <label for="telefono" class="formEve__texto">Teléfono:</label>
+        <input type="number" name="telefono" class="form__cajas">
+      </div>
+
+      <div class="tipoEve">
+        <p class="formEve__texto">Indique el tipo de Evento:</p>
+        <select name="notificacion" class="tipoEve__caja">
+          <option value="text">Desayuno</option>
+          <option value="text">Agape</option>
+          <option value="text">Almuerzo</option>
+          <option value="text">Cena</option>
+          <option value="text">Mesa Dulce</option>
+        </select>
+      </div>
+
+      <div class="detalle">
+        <label for="mensaje" class="formEve__texto">Detalle su pedido:</label>
+        <input type="text" name="mensaje" class="detalle__caja">
+      </div>
+
+      <input type="submit" value="Cotizar" class="cotizar"/>
+    </form>
   </section>
 
   <footer id="pie" class="footer">
-    <h2 class="footer__titulo">
-      Productos Alimenticios SRL
-    </h2>
-    <section class="footer__texto">
-      <a href="contacto.html">Contactanos</a>
+    <h4 class="footer__titulo">
+      <a href="../index.html">Productos Alimenticios SRL</a>
+    </h4>
+    <div class="footer__texto">
+      <a href="./contacto.html">Contactanos</a>
 
       <a href="https://www.instagram.com/confiteriaproal/"><img src="../imagenes/insta.png"
           alt="instagram">@confiteriaProal</a>
@@ -91,12 +139,15 @@
         <input type="email" name="correo">
         <input type="submit" value="Enviar">
       </form>
-    </section>
+    </div>
+    <div class="footer__legal">
+      <p>
+        Copyright PROAL SRL - 2022. Todos los derechos reservados. Defensa de las y los consumidores. Para
+        reclamos
+        <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario">ingrese aquí</a>.
+      </p>
+    </div>
 
-    <P class="footer__texto--legal">
-      Copyright PROAL SRL - 2022. Todos los derechos reservados. Defensa de las y los consumidores. Para reclamos
-      <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario">ingrese aquí</a>.
-    </P>
   </footer>
 
 

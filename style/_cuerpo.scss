@@ -1,0 +1,407 @@
+.cuerpo__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+
+}
+
+.cuerpo__vid {
+    border-radius: 0.5cm;
+}
+
+.propaganda {
+    display: grid;
+    border: 4px solid darkred;
+    border-radius: 0.2cm;
+    grid-template-rows: 0.75fr 2fr;
+
+    grid-template-areas:
+        "cabecera   cabecera  cabecera"
+        "huevo      vigilia   rosca"
+    ;
+
+}
+
+@each $num in huevo,
+rosca,
+vigilia {
+    .#{$num}-fondo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        grid-area: #{$num};
+        background-image: url(../imagenes/#{$num}.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 0.5cm;
+        width: 250px;
+        height: 250px;
+        margin: auto;
+        margin-bottom: 10px;
+
+        .colorTexto {
+            color: gainsboro;
+            font-size: 22px;
+            font-weight: 700;
+            text-align: center;
+
+            .textoRosca {
+                color: darkgrey;
+            }
+        }
+    }
+}
+
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    grid-area: cabecera;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    text-decoration: underline;
+    text-align: center;
+
+}
+
+
+@media (max-width: 1000px) {
+    .propaganda {
+
+        grid-template-rows: 0.5fr 1fr 1fr;
+
+        grid-template-areas:
+            "cabecera   cabecera"
+            "huevo      vigilia"
+            "rosca      rosca"
+        ;
+
+    }
+
+    @each $num in huevo,
+    rosca,
+    vigilia {
+        .#{$num}-fondo {
+            margin-left: 40px;
+            margin-bottom: 10px;
+
+        }
+    }
+
+}
+
+@media (max-width: 770px) {
+    .propaganda {
+        grid-template-rows: 0.5fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "cabecera"
+            "huevo"
+            "vigilia"
+            "rosca"
+        ;
+    }
+
+    @each $num in huevo,
+    rosca,
+    vigilia {
+        .#{$num}-fondo {
+            width: 400px;
+            height: 400px;
+            margin: auto;
+
+        }
+    }
+}
+
+@media (max-width: 450px) {
+
+    @each $num in huevo,
+    rosca,
+    vigilia {
+        .#{$num}-fondo {
+            width: 280px;
+            height: 280px;
+            margin: auto;
+
+        }
+    }
+}
+
+
+.seccion__form {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1px;
+    margin: auto;
+    border: 5px solid darkred;
+    width: 320px;
+    border-radius: 0.2cm;
+}
+
+.form__texto {
+    font-size: 16px;
+    font-family: 'Mukta', sans-serif;
+}
+
+.form__cajas {
+    width: auto;
+
+}
+
+.form__cajas--mensaje {
+    height: 60px;
+}
+
+.form__desplegable {
+    height: 20px;
+    width: 40px;
+    margin: 1px;
+}
+
+.form__boton {
+    margin: auto;
+    width: 90px;
+    height: 25px;
+}
+
+.contacto__sucursales {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 10px;
+
+}
+
+.sucursales__lista {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: auto;
+
+
+    .lista {
+        border: solid 3px darkred;
+        border-radius: 0.2cm;
+        margin: 2px;
+        padding: 2px;
+
+        .lista__texto {
+            font-family: 'Mukta', sans-serif;
+            font-size: 16px;
+            text-align: center;
+
+        }
+
+        .lista__mapa {
+            display: flex;
+            border-radius: 0.1cm;
+            margin: auto;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+
+    .sucursales__lista {
+        flex-direction: column;
+    }
+}
+@media (max-width: 350px) {
+    .seccion__form {
+        border: 3px solid darkred;
+        width: 250px;
+        border-radius: 0.1cm;
+    }
+}
+
+.eventos {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding: 0;
+    margin: 0;
+    grid-template-areas: 
+    "lista   principal"
+    ;
+
+    .eventos__tipos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: lista;
+
+        .tipos__orden {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: 5px;
+            height: fit-content;
+            
+           
+            .tipos__texto {
+                text-align: center;
+                vertical-align: middle;
+                margin: auto;
+                padding: 5px;
+            }
+            .tipos__imagen {
+                border-radius: 0.2cm;
+                margin: 2px;
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+
+    .imagen__ppal {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+        border-radius: 0.01cm;
+        margin-right: 5PX;
+        grid-area: principal;
+       
+    }
+}
+
+.eventos__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+    padding: 5px;
+    margin: 20px;
+    background-color: black;
+    border-radius: 0.2cm;
+    grid-template-areas: 
+    "nombre     tipoEve"
+    "mail       detalle"
+    "telef      detalle"
+    "cotizar    cotizar"
+    ;
+
+    .nom{
+        display: flex;
+        justify-content: center;
+        margin: 2px;
+        grid-area: nombre;
+    }
+    .mail{
+        display: flex;
+        justify-content: center;
+        margin: 2px;
+        grid-area: mail;
+    }
+    .telef {
+        display: flex;
+        justify-content: center;
+        margin: 2px;
+        grid-area: telef;
+    }
+    .tipoEve {
+        grid-area: tipoEve;
+        display: flex;
+        padding: 3px;
+
+        .tipoEve__caja {
+            margin-left: 5px;
+            width: 90px;
+            height: 25px;
+        }
+    }
+    .detalle {
+        display: flex;
+        flex-flow: column nowrap;
+        grid-area: detalle;
+
+        .detalle__caja {
+            height: 50px;
+        }
+    }
+    .cotizar {
+        grid-area: cotizar;
+        margin: auto;
+        width: 80px;
+        height: 25px;
+        font-weight: bold;
+        background-color: lightgray;
+    }
+}
+
+.formEve__texto {
+    font-size: 16px;
+    font-family: 'Mukta', sans-serif;
+    color: wheat;
+}
+
+@media (max-width: 720px) {
+    .eventos {
+        grid-template-rows: 0.75fr 1fr;
+        grid-template-areas: 
+        "principal"
+        "lista"
+        ;
+
+    }
+  
+    .eventos__form {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+
+    }
+}
+
+@media (max-width: 400px) {
+    .eventos {
+        grid-template-rows: 0.5fr 1fr;;
+        grid-template-areas: 
+        "principal"
+        "lista"
+        ;
+    
+        .eventos__tipos {
+           grid-area: lista;
+    
+            .tipos__orden {
+                display: flex;
+                flex-direction: column;
+               
+            }
+        }
+    
+    }    
+}
+
+/*Seccion Nosotros
+Pedir contenido para armar la sección*/
+
+.mensajeReparacion {
+    margin-top: 100px;
+    margin-bottom: 100px;   
+    margin-left: auto;
+    margin-right: auto;
+    padding: 75px;
+    width: 600px;
+    text-align: center;
+
+   
+}
+
+@media (max-width: 600px) {
+    .mensajeReparacion {
+        margin-top: 60px;
+        margin-bottom: 100px;    
+        padding: 5px;
+        width: 300px;
+        text-align: center;
+    
+       
+    }
+}

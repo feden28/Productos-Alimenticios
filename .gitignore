@@ -1,0 +1,9 @@
+#Cómo ignorar carpetas al momento de subirlas a GitHub (.gitignore):
+
+node_modules/
+
+#  Como ignorar un tipo de documento:
+# *.scss
+
+
+
